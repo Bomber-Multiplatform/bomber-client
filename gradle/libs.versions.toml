@@ -1,5 +1,5 @@
 [versions]
-kotlin = "1.8.0"
+kotlin = "1.7.20"
 kotlinx-coroutines = "1.6.4"
 kotlinx-serialization = "1.4.1"
 ktor = "2.0.1"
@@ -9,6 +9,8 @@ exposed = "0.41.1"
 kmongo = "4.8.0"
 androidGradlePlugin = "7.3.1"
 androidComposeVersion = "1.4.0-alpha02"
+jetbrainsComposeVersion = "1.2.2"
+lifecycleVersion = "2.5.1"
 
 [libraries]
 kotlinx-coroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinx-coroutines" }
@@ -50,6 +52,8 @@ compose-activity = { module = "androidx.activity:activity-compose", version.ref 
 compose-viewmodel = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "androidComposeVersion" }
 compose-accompanist-systemUiController = { module = "com.google.accompanist:accompanist-systemuicontroller", version.require = "0.28.0" }
 
+androidx-viewmodel = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycleVersion" }
+
 [plugins]
 kotlinx-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
@@ -58,3 +62,4 @@ kotlin-js = { id = "org.jetbrains.kotlin.js", version.ref = "kotlin" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }
 android-application = { id = "com.android.library", version.ref = "androidGradlePlugin" }
+jetbrains-compose = { id = "org.jetbrains.compose", version.ref = "jetbrainsComposeVersion" }

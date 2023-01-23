@@ -14,12 +14,17 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
         maven("https://jitpack.io")
         maven("https://maven.y9vad9.com")
     }
 }
 
-rootProject.name = "kotlin-project-template"
+rootProject.name = "bomber-client"
 
 //includeBuild("buildUtils/service-deploy")
 //includeBuild("buildUtils/library-deploy")
+
+include(":common", ":desktop")
+include(":features:country-flags", ":features:social-icons")
+include(":features:mpp-viewmodel")
